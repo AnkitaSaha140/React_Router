@@ -1,27 +1,25 @@
-import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
- class Products extends Component {
-    gotoProductDetail =(path)=>{
-        this.props.history.push(path)      
+class Products extends Component {
+
+    goToDetails = (product) => {
+        this.props.history.push(`/products/${product}`);
     }
+    
 
-  render() {
-    return (
-      <div>
-        <h1>Products List</h1>
-        <center>
-            <ul>
-                <li onClick={()=>this.gotoProductDetail('/product?productItem=iPhone')}>iPhone</li>
-                <li onClick={()=>this.gotoProductDetail('/product?productItem=iPad')}>iPad</li>
-                <li onClick={()=>this.gotoProductDetail('/product?productItem=iMac')}>iMac</li>
-                <li onClick={()=>this.gotoProductDetail('/product?productItem=iWatch')}>iWatch</li>  
-
-            </ul>
-        </center>
-       
-      </div>
-    );
-  }
+    render() {
+        return (
+            <center>
+                <ul>
+                    <li onClick={() => this.goToDetails('iPhone')}>iPhone</li>
+                    <li onClick={() => this.goToDetails('iPad')}>iPad</li>
+                    <li onClick={() => this.goToDetails('iMac')}>iMac</li>
+                    <li onClick={() => this.goToDetails('iWatch')}>iWatch</li>
+                </ul>
+            </center>
+        )
+    }
 }
-export default withRouter(Products)
+
+export default withRouter(Products);

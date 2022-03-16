@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import NewRouter from './NewRouter';
+//import NewRouter from './NewRouter';
 
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import RouterPage from './RouterPage';
+import RouterPage from './RouterPage';
 
 
 ReactDOM.render(
- // <RouterPage />,
- <NewRouter />,
+  <RouterPage />,
+// <NewRouter />,
   document.getElementById('root')
 );
 

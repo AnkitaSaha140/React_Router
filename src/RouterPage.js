@@ -9,6 +9,7 @@ import Product from './component/layout/Product';
 import Products from './component/layout/Products';
 import NotFound from './component/error/NotFound';
 import Contact from './component/layout/Contact';
+import Todos from './component/layout/Todos';
 
 export default class RouterPage extends Component {
   render() {
@@ -17,12 +18,13 @@ export default class RouterPage extends Component {
         <BrowserRouter>
         <Header />
         <Route exact path='/' component={Login} />
-        <Route path='/home' component={Home} />
-        <Route path='/products' component={Products} />
+        <Route path='/home' component={Home} />        
         <Route path='/contact' component={Contact} />
-        <Route path='/products' component={Product} />
+        <Route exact path="/products" component={Products}/>
+        <Route path="/products/:name" component={Product}/>               
         <Route path='/logout' component={Logout} />
         <Route path='/notfound' component={NotFound} />
+        <Route path='/todos' component={Todos} />
          <Footer />
         </BrowserRouter>
       </div>

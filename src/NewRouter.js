@@ -39,7 +39,7 @@ export default class NewRouter extends Component {
             <Route path='/products'>
             <Products />
             </Route>
-            <Route path='/product'>
+            <Route path='/products:name'>
             <Product />
             </Route>
             <Route path='/login'>
